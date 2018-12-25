@@ -1,0 +1,140 @@
+/* ---------- 全局样式 ---------- */
+
+body {
+    padding-top: 0px;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+    background-image: url("../img/bg2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    /*-webkit-filter: blur(3px)*/
+}
+
+
+
+/*nav*/
+
+/* Footer 颜色动态变化效果*/
+/* .page-footer{
+    background: radial-gradient(circle, #c48dff, #6bdd89, #2a5ae4);
+    background-size:1000% 300%;
+    animation:mymove 100s ease infinite;
+    -webkit-animation: mymove 100s ease infinite;
+    -moz-animation: mymove 100s ease infinite;
+} */
+
+@keyframes mymove
+{
+    0% {
+        background-position: 0% 0%; }
+    50% {
+        background-position: 50% 100%; }
+    100% {
+        background-position: 100% 0%; }
+}
+
+/* nav-setting */
+#sidenav_button {
+    /*     position: fixed;
+    float: left;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-left: 15px; */
+    /* margin-right: 30px;
+    padding-top: 40px;
+    color: green; */
+}
+
+#mode_edit{
+    position: fixed;
+    float: right;
+    margin-bottom: 85px;
+}
+
+
+
+.row {
+    margin-top: 30px;
+}
+
+
+/* notification */
+/* 给提示信息添加圆角样式 */
+#card_alert {
+    margin-top: 36px;
+    border-style: hidden;
+    border-radius: 2em;
+}
+
+.collection {
+    border-style: hidden;
+    border-radius: 2em;
+}
+
+#post-content {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown-trigger {
+    float: right;
+}
+
+/***preloader(预加载器)*****/
+.preloader-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, #7a8286, #4cd1dd, #eee);
+    background-size:1000% 300%;
+    animation:mymove 20s ease infinite;
+    -webkit-animation: mymove 20s ease infinite;
+    -moz-animation: mymove 20s ease infinite;
+    /*background-color: rgba(108, 255, 70, 0.44);*/
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+@keyframes mymove
+{
+    0% {
+        background-position: 0% 0%; }
+    50% {
+        background-position: 50% 100%; }
+    100% {
+        background-position: 100% 0%; }
+}
+
+
+/**************markdown 样式*************/
+
+.cd-fixed-bg {
+    min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cd-fixed-bg.cd-bg-1 {
+    background-image: url("/../img/bg.jpg");
+}
+.cd-fixed-bg.cd-bg-2 {
+    background-image: url("/../img/upload_0e9f19ab740f1892892922ccfdde367e.jpg");
+}
+.cd-fixed-bg.cd-bg-3 {
+    background-image: url("/../img/user.jpg");
+}
+
+.cd-scrolling-bg {
+    min-height: 100%;
+}
