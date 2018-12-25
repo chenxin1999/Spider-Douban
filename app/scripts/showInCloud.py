@@ -1,5 +1,5 @@
 # -*-coding:utf-8-*-
-# 原文：https://blog.csdn.net/qiang12qiang12/article/details/81082675
+# 参考原文：https://blog.csdn.net/qiang12qiang12/article/details/81082675
 
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
@@ -10,32 +10,36 @@ from aip import AipNlp
 
 def sentimentClassify():
     texts = open(
-        "/home/shirocheng/Documents/CODE/python-course/spider-douban/app/static/text/Comments.txt", "rb").readlines()
+        "./static/text/Comments.txt", "rb").readlines()
 
+    # 百度AI开放平台 api
     APP_ID = "15268395"
     API_KEY = "Gc1BixscBwkbcaw8tx6OwxK2"
     SECURITY_KEY = "o3RLCx4x8nA8gkevTnq818WLTnZP2j1C"
-
     client = AipNlp(APP_ID, API_KEY, SECURITY_KEY)
 
-    f = open('/home/shirocheng/Documents/CODE/python-course/spider-douban/app/static/text/NlpResult.txt',
-        'w', encoding='utf-8')
+    f = open('./static/text/NlpResult.txt',
+             'w', encoding='utf-8')
     for text in texts:
-        text = str(text, encoding='utf-8')
-        result = client.sentimentClassify(text)
-        print(result)
-        f.write(str(result['text']))
-        f.write('\n')
-        f.write("积极程度：")
-        f.write(str(result['items'][0]["positive_prob"]))
-        f.write('\n')
-        f.write("消极程度：")
-        f.write(str(result['items'][0]["negative_prob"]))
-        f.write('\n\n')
+        try:
+            text = str(text, encoding='utf-8')
+            result = client.sentimentClassify(text)
+            print(result)
+            f.write(str(result['text']))
+            f.write('\n')
+            f.write("积极程度：")
+            f.write(str(result['items'][0]["positive_prob"]))
+            f.write('\n')
+            f.write("消极程度：")
+            f.write(str(result['items'][0]["negative_prob"]))
+            f.write('\n\n')
+        except Exception:
+            print(Exception)
+
 
 def setWordCloud():
     text = open(
-        "/home/shirocheng/Documents/CODE/python-course/spider-douban/app/static/text/Comments.txt", "rb").read()
+        "./static/text/Comments.txt", "rb").read()
 
     # 结巴分词
     wordlist = jieba.cut(text, cut_all=True)
@@ -43,7 +47,7 @@ def setWordCloud():
     # 设置词云
     wc = WordCloud(background_color="white",  # 设置背景颜色
                    mask=imread(
-                       '/home/shirocheng/Documents/CODE/python-course/spider-douban/app/static/img/ic_twitter.jpg'),  # 设置背景图
+                       './static/img/ic_twitter.jpg'),  # 设置背景图
                    width=1045,
                    height=882,
                    max_words=1000,  # 设置最大显示的字数
@@ -56,7 +60,7 @@ def setWordCloud():
                    )
     myword = wc.generate(wl)  # 生成词云
     wc.to_file(
-        '/home/shirocheng/Documents/CODE/python-course/spider-douban/app/static/img/result.jpg')
+        './static/img/result.jpg')
     # 返回评论列表
 
 # # 展示词云图

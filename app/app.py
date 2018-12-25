@@ -12,7 +12,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = timedelta(seconds=1)
 # subject example：1292052
 
 
-@app.route('/hello', methods=['POST', 'GET'])
+@app.route('/', methods=['POST', 'GET'])
 def hello(wordlist=None):
     if request.method == 'POST':
         subject = request.form['subject']

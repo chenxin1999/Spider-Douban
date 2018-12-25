@@ -1,5 +1,5 @@
 # -*-coding:utf-8-*-
-# 原文：https://blog.csdn.net/qiang12qiang12/article/details/81082675
+# 参考原文：https://blog.csdn.net/qiang12qiang12/article/details/81082675
 
 import urllib.request
 from bs4 import BeautifulSoup
@@ -44,9 +44,9 @@ def getShowComment(url):
 
 
 def writeData(subject):
-    f = open('/home/shirocheng/Documents/CODE/python-course/spider-douban/app/static/text/Comments.txt',
-             'w', encoding='utf-8')
-    f1 = open('/home/shirocheng/Documents/CODE/python-course/spider-douban/app/static/text/showComments.txt',
+    f = open('./static/text/Comments.txt',      
+             'w', encoding='utf-8')     # 注意：相对路径是相对于 app.py 的(因为该函数在 app.py 中被调用)
+    f1 = open('./static/text/showComments.txt',
               'w', encoding='utf-8')
     for page in range(1):  # 豆瓣爬取多页评论需要验证。
         url = 'https://movie.douban.com/subject/' + subject + '/comments?start=' + \
