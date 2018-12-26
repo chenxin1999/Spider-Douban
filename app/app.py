@@ -22,10 +22,6 @@ def hello(wordlist=None):
     elif request.method == 'GET':
         return render_template('test.html')
 
-
-with app.test_request_context():
-    url_for('static', filename='illya.jpg')
-
 if __name__ == '__main__':
     app.debug = True
     app.run(host='0.0.0.0')

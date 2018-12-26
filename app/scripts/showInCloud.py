@@ -46,8 +46,7 @@ def setWordCloud():
     wl = " ".join(wordlist)
     # 设置词云
     wc = WordCloud(background_color="white",  # 设置背景颜色
-                   mask=imread(
-                       './static/img/ic_twitter.jpg'),  # 设置背景图
+                   # mask=imread('./static/img/ic_twitter.jpg'),  # 设置背景图
                    width=1045,
                    height=882,
                    max_words=1000,  # 设置最大显示的字数
