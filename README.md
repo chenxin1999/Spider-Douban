@@ -23,6 +23,22 @@ https://movie.douban.com/
 
 ## 项目介绍
 
+### 生成结果
+
+评论列表与词云：
+
+![屏幕快照 2019-03-29 下午7.35.23](https://ws4.sinaimg.cn/large/006tKfTcly1g1jwe70mqlj31c00u0e81.jpg)
+
+评论列表情绪分析：
+
+![屏幕快照 2019-03-29 下午7.35.43](https://ws3.sinaimg.cn/large/006tKfTcly1g1jwe7oxmhj31c00u07q8.jpg)
+
+### to-do
+
+使用 RASA_NLU 训练对话模型
+
+
+
 ### 本地部署
 
 ```shell
@@ -130,24 +146,6 @@ result = client.sentimentClassify(text)
     ]
 }
 ```
-
-
-
-### 生成结果
-
-评论列表与词云：
-
-![overview](http://pka2c40kn.bkt.clouddn.com/image/python-course-final/spider-doubanScreenshot%20from%202018-12-26%2023-25-07.png)
-
-评论列表情绪分析：
-
-![emotion](http://pka2c40kn.bkt.clouddn.com/image/python-course-final/spider-doubanScreenshot%20from%202018-12-26%2023-26-09.png)
-
-
-
-### to-do
-
-使用 RASA_NLU 训练对话模型
 
 
 

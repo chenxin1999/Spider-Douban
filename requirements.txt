@@ -4,5 +4,4 @@ jieba==0.39
 matplotlib==3.0.2
 wordcloud==1.5.0
 baidu_aip==2.2.10.0
-aip==1.0.0.5
 beautifulsoup4==4.6.3

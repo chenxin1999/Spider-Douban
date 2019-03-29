@@ -52,7 +52,7 @@ def setWordCloud():
                    max_words=1000,  # 设置最大显示的字数
                    stopwords=["剧场", "剧场版", "剧情", "不是", "就是", "没有", "看到", "画面", "虽然", "简直", "作品",
                               "一部", "有点", "感觉", "真的", "还是", "这个", "啊啊啊", "粉丝", "真是", "完全", "已经"],  # 设置停用词
-                   font_path="/usr/share/fonts/adobe-source-han-sans/SourceHanSansCN-Regular.otf",  # 设置为思源黑体 常规
+                   font_path="/System/Library/Fonts/STHeiti Medium.ttc", # 设置为华文黑体
                    # 设置中文字体，使得词云可以显示（词云默认字体是“DroidSansMono.ttf字体库”，不支持中文）
                    max_font_size=80,  # 设置字体最大值
                    random_state=200,  # 设置有多少种随机生成状态，即有多少种配色方案

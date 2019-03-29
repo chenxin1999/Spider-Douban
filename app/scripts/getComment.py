@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 def getHtml(url):
     """获取url页面"""
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'}
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3607.0 Safari/537.36'}
     req = urllib.request.Request(url, headers=headers)
     req = urllib.request.urlopen(req)
     content = req.read().decode('utf-8')
