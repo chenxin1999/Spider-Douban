@@ -54,26 +54,23 @@ $ python app.py		//浏览器访问对应端口
 ```
 .								
 ├── app							
-│   ├── app.py					//项目入口文件
-│   ├── scripts					//脚本目录
-│   │   ├── getComment.py		//获取数据脚本
-│   │   └── showInCloud.py		//处理数据脚本
-│   ├── static					//静态目录
+│   ├── app.py					    //项目入口文件
+│   ├── scripts					    //脚本目录
+│   │   ├── getComment.py		    //获取数据脚本
+│   │   └── showInCloud.py		    //处理数据脚本
+│   ├── static					    //静态目录
 │   │   ├── css				
-│   │   │   └── style.css		//全局样式
-│   │   ├── img					//图片目录
-│   │   │   ├── bg2.jpg			
-│   │   │   ├── hint_subject.png
-│   │   │   ├── ic_twitter.jpg
-│   │   │   └── result.jpg
-│   │   └── text				//数据存储目录
-│   │       ├── Comments.txt
-│   │       ├── NlpResult.txt
-│   │       └── showComments.txt
-│   └── templates				//模板
+│   │   │   └── style.css		    //全局样式
+│   │   ├── img					    //图片目录
+│   │   │   └── result.jpg          //(运行时生成)
+│   │   └── text				    //数据存储目录
+│   │       ├── Comments.txt        //(运行时生成)
+│   │       ├── NlpResult.txt       //(运行时生成)
+│   │       └── showComments.txt    //(运行时生成)
+│   └── templates				    //模板
 │       └── test.html
 ├── README.md
-└── requirements.txt			//依赖列表
+└── requirements.txt			    //依赖列表
 
 ```
 

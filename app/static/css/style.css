@@ -113,28 +113,3 @@ body {
     100% {
         background-position: 100% 0%; }
 }
-
-
-/**************markdown 样式*************/
-
-.cd-fixed-bg {
-    min-height: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.cd-fixed-bg.cd-bg-1 {
-    background-image: url("/../img/bg.jpg");
-}
-.cd-fixed-bg.cd-bg-2 {
-    background-image: url("/../img/upload_0e9f19ab740f1892892922ccfdde367e.jpg");
-}
-.cd-fixed-bg.cd-bg-3 {
-    background-image: url("/../img/user.jpg");
-}
-
-.cd-scrolling-bg {
-    min-height: 100%;
-}
